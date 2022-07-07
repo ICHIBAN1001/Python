@@ -3,8 +3,10 @@ import random   # 랜덤함수를 사용하기위해
                 # 랜덤함수 모듈 import  <-필수
 
 # <  ramdom 기초 개념  >
-for value in range (100) :
-	# random.random()        -> 0 이상 1 미만의  실수값을 난수(임의의 값) 로 출력
+for value in range (100) :   # ->    0
+ 	# random.random()        -> 0 이상 1 미만의  실수값을 난수(임의의 값) 로 출력 
+    # 0 이상 1미만의 실수를 반환
+    # 0.0 ~ 0.999999999........
 		print(random.random())
 
 # 1~10 사이 양의 정수값을 랜덤 값으로 생성.
