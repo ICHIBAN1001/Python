@@ -46,7 +46,7 @@ print()
 
 # 반복 적으로 list 안에 있는 값들을 추출
 # 最小 값 
-Max = MyList[RandomValue-1]
+Max =  MyList[RandomValue-1]
 # 最大 값 
 Min =  MyList[RandomValue-1]
 # 합계 담을 변수 공간 
