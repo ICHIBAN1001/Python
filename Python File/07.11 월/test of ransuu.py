@@ -59,12 +59,24 @@ print("平均 : ", sum/len(malist))
 # 3. List 내 중복 값과 중복 횟수 정보 출력
 
 # 임의의 리스트 공간 작성 
-elist1 = []
-elist2 = []
+elist1 = []   # 없는거 넣는 리스트
+elist2 = []   # 빼기 리스트 
 
 # for 반복문으로 malist 안에 있는 원소들 하나씩 뽑기
-# 뽑힌 원소들이 빈리스트와 대조를 이뤄
+for value in range (len(malist)) :
+# 뽑힌 원소들이 빈리스트와 대조를 이뤄 없으면 빈리스트에 추가 
+    element = malist[value] 
+    if element not in elist1 :
+        elist1.append(element)
+    if element not in elist1 :
+        print(elist1[value])
 
+print(elist1)
+
+print("-----")
+for value in range (len(malist)) :
+    if malist not in elist1 :
+        elist2.append(elist1[value])
 
 # ----------------------------------------------------------------------------------------------------------
 # 4. List 내 중복 값과 중복 횟수 정보 출력
