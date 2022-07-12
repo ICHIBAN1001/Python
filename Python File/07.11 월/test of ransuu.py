@@ -66,17 +66,17 @@ elist2 = []   # 빼기 리스트
 for value in range (len(malist)) :
 # 뽑힌 원소들이 빈리스트와 대조를 이뤄 없으면 빈리스트에 추가 
     element = malist[value] 
+    # 마이 리스트 안에 없는 것들을  elist1 에다가 넣기 
     if element not in elist1 :
         elist1.append(element)
-    if element not in elist1 :
-        print(elist1[value])
-
 print(elist1)
 
-print("-----")
-for value in range (len(malist)) :
-    if malist not in elist1 :
-        elist2.append(elist1[value])
+
+for value1 in elist1 :
+    for value2 in malist :
+   
+
+
 
 # ----------------------------------------------------------------------------------------------------------
 # 4. List 내 중복 값과 중복 횟수 정보 출력
