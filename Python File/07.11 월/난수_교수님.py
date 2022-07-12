@@ -31,7 +31,9 @@ for value in myList:
 #평균
 avg = sum / len(myList)
 
-print(min, max, sum, avg)
+print("최소 : ",min," ","최대 : ", max," ","합계 : ",sum," ","평균 : ",avg)
+
+############################################################################################
 
 temp = []
 duplicatedNum = [0] * len(myList)
