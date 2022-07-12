@@ -39,7 +39,7 @@ temp = []
 duplicatedNum = [0] * len(myList)
 
 # 중복값, 중복 회수
-for value in myList:
+for value in myList:            # [8, 15, 15, 5, 7, 1, 8, 10, 12, 8, 12, 12, 11, 20, 4, 17, 14, 9, 1, 20] 
     # value in temp -> 중복값
     # duplicatedNum[value - 1] 1 증가
     if value in temp:
