@@ -89,13 +89,13 @@ while switch :
         print("Out : 아웃",Out,"번")
     # Strike , Ball 일 때 
     if Strike >= 1 or Ball>= 1 : 
-        if Strike >= 1 and Ball>= 1 :
-            print(Strike,"Strike"," ",Ball,"Ball")
-            
-        elif Strike >= 1 :
+        if Strike >= 1 :
             print(Strike,"Strike")
         elif Ball >= 1 :
             print(Ball,"Ball")
+    elif Strike >= 1 and Ball>= 1 :
+        print(Strike,"Strike"," ",Ball,"Ball")
+        
 # 시도 횟수 초과일경우  ->  count >=5  "or" Out == 2
     if  count >=5 or Out ==2 :
         print()
