@@ -47,14 +47,23 @@ switch = True
 
 # 1. 전체를 반복으로 흐름을 제어할 반복문 작성
 while switch :
+    # count 알려주는 횟수 출력기
     print("시도횟수 :",count)
     print("정수 3개를 입력하세용~ ")
-    InputValue1 = int(input("첫 번째 정수 : ")) #  <- 정수 3개 입력할 곳
-    InputValue2 = int(input("두 번째 정수 : ")) #  <- 정수 3개 입력할 곳
-    InputValue3 = int(input("세 번째 정수 : ")) #  <- 정수 3개 입력할 곳
+    
+    # n 번 변수 공간 작성
+    Number = int(input("몇개 입력 할래? : "))
+
+    # 입력 요소 리스트 공간 작성
+    myList = []
+
+    # 반복문 으로 계속해서 myList 에 입력할 원소 뽑기 
+    for value in range (1,Number+1) :
+        kazu = input(str(value)+"번째 정수 :")
+        myList.append(kazu)
+
     # 위의 입력 받은 값들을 리스트로 정렬
-    myList = [InputValue1 , InputValue2 , InputValue3]
-    print()
+    print(myList)
    
 # [난수 값] 과 [입력 값] 비교
 # 2. [난수 값] 을 for 반복문으로 하나씩 추출
@@ -74,7 +83,6 @@ while switch :
         Out += 1
         # count     
     count += 1
-
 
     # Out
     if Out>=1 :
