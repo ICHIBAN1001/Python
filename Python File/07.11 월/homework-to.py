@@ -21,29 +21,23 @@ count = 1
 #시도 횟수 알림 
 print("시도횟수 :",count)
 #0~9 사이 정수 입력 받기
-print("정수 3개를 입력하세용~ ")
 
-
-InputValue1 = int(input("")) #  <- 정수 3개 입력할 곳
-InputValue2 = int(input("")) #  <- 정수 3개 입력할 곳
-InputValue3 = int(input("")) #  <- 정수 3개 입력할 곳
-
-List = [InputValue1 , InputValue2 , InputValue3]
-
-# 3개의 정수를 담을 리스트 작성
-RanSu = []
+print()
+# 3개의 정수(난수)를 담을 리스트 작성
+ransu = []
 
 # 반복문으로 3개의 정수 뽑기 : 총 3개의 난수 생성 (범위는 3까지)
-while len(RanSu) < 3 :
+while len(ransu) < 3 :
     value = random.randint(0,9)
-    if value not in RanSu :
-        RanSu.append(value)
+    if value not in ransu :
+        ransu.append(value)
 # Game 의 정수가 안 겹치게    
-print(RanSu)
+# print(ransu)
+ransu = [3,1,2]
+print(ransu)
 
 ###################################################################################################################
 
-switch = True
 # 변수  Strike
 Strike = 0
 # 변수  Ball
@@ -51,28 +45,55 @@ Ball = 0
 # 변수  Out
 Out = 0
 
+#while 전체 반복문 스위치 
+switch = True
+
 # 1. 전체를 반복으로 흐름을 제어할 반복문 작성
 while switch :
-# 해당 값 입력받고 , 경우에 따른 조건  
-    # for 문으로 안에 있는 수 뽑아내기 
-    for value1 in range (len(RanSu)) :
-        element1 = RanSu[value1]
-        for value2 in range(len(List)) :
-            element2 = List[element2] 
-            if element1 == element2 :
-                Strike += 1
-
-    # Strike 일 경우   ,  Strike : 자릿수 AND “난수 값 == 입력 값” 일 경우
-            
-    # Ball 일 경우 
-   
-        Ball += 1
-    # Out 일 경우 
+    print("정수 3개를 입력하세용~ ")
+    # InputValue1 = int(input("첫 번째 정수 : ")) #  <- 정수 3개 입력할 곳
+    # InputValue2 = int(input("두 번째 정수 : ")) #  <- 정수 3개 입력할 곳
+    # InputValue3 = int(input("세 번째 정수 : ")) #  <- 정수 3개 입력할 곳
+# 위의 입력 받은 값들을 리스트로 정렬
+    # myList = [InputValue1 , InputValue2 , InputValue3]
+    myList = [3 , 1 , 2]
     
+# [난수 값] 과 [입력 값] 비교
+# 2. [난수 값] 을 for 반복문으로 하나씩 추출
+        # 1. [입력 값] 을 for 반복문으로 하나씩 추출
+    for index_inp in range (len(myList)) :
+        inp = myList[index_inp]
+        for index_ran in range (len(ransu)) :
+            ran = ransu[index_ran]
+        # < Strike >    
+        # 2.1) 만약 "(난수)자릿수" and "난수 값" == "입력 값" 이면  -> Strike    
+          # 2.1-1) 난수 값 = 입력 값
+            if inp in ransu :    
+                if ran == inp :
+                    if index_inp == index_ran :
+                        Strike += 1 
+                if ran != inp :
+                    if inp in ransu :        
+                        if index_inp != index_ran :
+                            Ball += 1
+            if Strike>=1 or Ball>=1:
+                continue
+    if Strike == 0 and Ball == 0 :
         Out += 1
-# 시도 횟수 초과일경우  ->  count >=5
-    if  count >=5 :
-        switch = False 
 
     # 반복문 횟수 제한    
     count += 1
+
+# 시도 횟수 초과일경우  ->  count >=5  "or" Out == 2
+    if  count >=5 or Out ==2 :
+        print()
+        print("게임횟수 초과")
+        print("아까비~~~졌네용..")
+        print("정답은 : " ,ransu[0],ransu[1],ransu[2], "입니다." )
+        switch = False 
+    #조건에 따른 출력문
+    print("스트라이크 :", Strike)
+    print("볼 :", Ball)
+    print("아웃 :", Out)
+    Strike = 0 
+    Ball = 0 
