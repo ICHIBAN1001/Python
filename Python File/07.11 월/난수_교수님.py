@@ -16,7 +16,7 @@ sum = 0
 avg = 0.0
     
 # 최소, 최대, 합계, 평균
-for value in myList:
+for value in myList:   # [8, 15, 15, 5, 7, 1, 8, 10, 12, 8, 12, 12, 11, 20, 4, 17, 14, 9, 1, 20] 
     # 최소 - value < min :  value <-min
     if value < min:
         min = value
