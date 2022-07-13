@@ -51,15 +51,19 @@ while switch :
     print("시도횟수 :",count)
     print("정수 3개를 입력하세용~ ")
     
-    # n 번 변수 공간 작성
-    Number = int(input("몇개 입력 할래? : "))
+    # # n 번 변수 공간 작성
+    # Number = int(input("몇개 입력 할래? : "))
+    # # 반복문 으로 계속해서 myList 에 입력할 원소 뽑기 
+    # for value in range (1,Number+1) :
+    #     kazu = input(str(value)+"번째 정수 :")
+    #     myList.append(kazu)
 
     # 입력 요소 리스트 공간 작성
     myList = []
 
     # 반복문 으로 계속해서 myList 에 입력할 원소 뽑기 
-    for value in range (1,Number+1) :
-        kazu = input(str(value)+"번째 정수 :")
+    for value in range (3) :
+        kazu = int(input(str(value+1)+"번째 정수 :"))
         myList.append(kazu)
 
     # 위의 입력 받은 값들을 리스트로 정렬
