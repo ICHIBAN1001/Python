@@ -14,13 +14,25 @@
 #------------------------------------------------------------------------------------------------------------------
 
 
-from sys import stdin
+# import random 으로 random 함수 부르기
+import random
+
+# 시도횟수 변수
+count = 1
+#출력기
+print("시도횟수 : ",count)
+print("정수 3개를 입력 하세요")
 
 
-S=stdin.readline().rstrip()
-print("S is digit? ",S.isdigit())
+# random 함수를 담을 리스트 변수 작성 (2개 이상)
+mylist = []
+# 반복문으로 범위 지정 개수 만큼 생성
+while len(mylist) < 3 :
+    betty = int(random.random()*10)
+    if betty not in mylist :
+        mylist.append(betty)
 
-#input: 010-1234-5678
-
-#output
-# S is alpha?  False
+# 3개의 정수를 입력 받기 
+jslist = []
+for value in range (len(mylist)) :   # len(mylist) = 3
+    jslist.append(int(input(str(value+1)+"번째 정수를 입력하세요 :")))
