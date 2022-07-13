@@ -31,26 +31,27 @@ for value in myList:   # [8, 15, 15, 5, 7, 1, 8, 10, 12, 8, 12, 12, 11, 20, 4, 1
 #평균
 avg = sum / len(myList)
 
-print("최소 : ",min," ","최대 : ", max," ","합계 : ",sum," ","평균 : ",avg)
+print("최소 : ",min,", ","최대 : ", max,",","합계 : ",sum,", ","평균 : ",avg)
 
 ############################################################################################
 
-temp = []
-duplicatedNum = [0] * len(myList)
+temp = []                            # 중복 값 체크하기 위한 리스트 : 새로운 리스트에 넣어 중복 구별 : 있으면 안 담음
+duplicatedNum = [0] * len(myList)    # 중복 값 체크한 것 담는 리스트
 
 # 중복값, 중복 회수
-for value in myList:            # [8, 15, 15, 5, 7, 1, 8, 10, 12, 8, 12, 12, 11, 20, 4, 17, 14, 9, 1, 20] 
+for value in myList:    # [8, 15, 15, 5, 7, 1, 8, 10, 12, 8, 12, 12, 11, 20, 4, 17, 14, 9, 1, 20] 
     # value in temp -> 중복값
     # duplicatedNum[value - 1] 1 증가
-    if value in temp:
+    if value in temp:                       # value : myList 안의 엘리먼트
         duplicatedNum[value - 1] += 1
     else:
     # 신규값 
     # temp에 신규 값 추가
         temp.append(value)
-        
-index = 1
-
+                        #    0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18  19 
+print(duplicatedNum)    #   [1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 1]     
+index = 1 # 1~ 20 까지 증가시켜  1~20 까지 몇개가 중복 되어 있는지 1씩 증가 시키기 위한 증가 변수 
+ 
 for value in duplicatedNum:
     if value >= 1:
         print(index, value + 1)
@@ -61,7 +62,8 @@ for value in duplicatedNum:
 
 # 구간 별 히스토그램
 numForInterval = [0]*4
-
+print()
+print("구간 별 히스토그램")
 for value in myList:
     if 1<= value <= 5:
         numForInterval[0] += 1
