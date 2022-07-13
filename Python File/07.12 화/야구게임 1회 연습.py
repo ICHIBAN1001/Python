@@ -29,6 +29,21 @@ while len(ranlist) < 3 :
     if value not in ranlist : 
         ranlist.append(value)
 
+#################################################
+# # 정수 3개 만들기 函数 
+# def Integer (entire,kara,made,name) :
+#     name = []
+#     import random
+#     while len(name) <entire :
+#         value = random.randint(kara,made)   
+#         if value not in name :
+#             name.append(value)
+#     return name
+# # 함수 입력 部分    
+# print(Integer(,,,""))
+#################################################
+
+
 
 # 횟수 체크 할 'count' 변수 생성
 count =1
