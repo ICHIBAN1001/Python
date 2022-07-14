@@ -1,34 +1,17 @@
-## 07.04 월
-#
-# 전체 층으로 사용할 변수 작성
-floor = 5
+# 1. 문구 출력 : 입력 문자열의 줄(Line) 수를 입력하세요! 
+LineNumber = int(input("입력 문자열의 줄(Line) 수를 입력하세요! : "))
+# 영문의 문자열 키보드로 입력 받아 리스트에 저장
+Word = ""
+# 입력 받기  for 반복문 => 1의 수만큼 반복
+for Value in range (LineNumber) :
+    InputValue = input(str(Value+1) +" 번째 라인의 문자열을 입력하세요. : ")
+    Word += InputValue 
+#검색할 문자열 확인  (인덱스로 확인)
+Search = input("검색 할 문자열을 입력하세요. : ")
+print(Word)
 
-# 1번 or 2번 택하게 조건문
-for full in range(2):
-    # 1번
-    if full == 0:
-        # 층을 반복적으로 작성할 for문 작성
-        for row in range(floor):
-            # 층에 맞는 별 들 입력 하는 반복문 작성
-            for star in range(1, floor+1):
-                # 조건 짝 수 층에는 2,4 번째에 별 입력 안함
-                if (row+1) % 2 == 0 and star % 2 == 0:
-                    print(" ", end="")
-                else:
-                    print("*", end="")
-            print()
-        # 1 번 다 끝나고 나면 띄어쓰기로 구분
-        print()
 
-    # 2번
-    else:
-        # 5층 반복할 반복문 작성
-        for row in range(floor):
-            # 층안에서 입력 할 값들 작성
-            for star in range(floor):
-                # 조건식 :  #해당 층 = 해당 별의 변수  ==> 빈공간 작성
-                if row == star:
-                    print(" ", end="")
-                else:
-                    print("*", end="")
-            print()
+for value in Word :
+    print(value)
+
+    
