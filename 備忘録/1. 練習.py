@@ -13,8 +13,11 @@
     
 # # 3. 검색할 문자열 확인  (인덱스로 확인)
 Search = input("검색 할 문자열을 입력하세요. : ")
+
 Word = "hello world hello worldddd hello kkk"           # "문자열"로  담을  변수
+
 WordList = ['hello world', 'hello worldddd hello', 'kkk']       # "리스트"로  담을  변수
+
 print(Word)
 print(WordList) 
 ################################################  리스트 저장  ################################################ 
@@ -24,9 +27,12 @@ linesu = [ 1,",", 2 , "," , 3 ]    # 5개
 
 linecount = 0
 line =""
-# 4. for 반복문으로 WordList 요소 하나씩 꺼내기 
-for element in WordList :  # index = [0] [1] [2]
 
+# 4. for 반복문으로 WordList 요소 하나씩 꺼내기 
+for row in range (len(WordList)) :  # index = [0] [1] [2]
+    for col in range (len(WordList[row])) :
+        print(WordList[row][col], " : ", end="")
+    print()
    
 
 # 5. 검색된 라인수
@@ -42,10 +48,35 @@ for element in WordList :  # index = [0] [1] [2]
 ################################################
 # 7. 총 단어 수
 # WordList 안에 " " 에 +1
-blank = 0
-for value in Word :
-    if value == " " :
-        blank += 1
-print("총 단어 수 : ",blank)
+
+
+# blank = 0
+# for value in Word :
+#     if value == " " :
+#         blank += 1
+# print("총 단어 수 : ",blank)
+
+
+
+
+#################################################################################################################
+
+
+# temp = [ "hello", "king", "car" ]
+
+# print(len(temp)) 
+
+# print(len(temp[0])) 
+# print(len(temp[1])) 
+# print(len(temp[2])) 
+
+# print(temp[1][3])
+
+# for row in range(len(temp)): # row 0 -> 2
+#     for col in range(len(temp[row])): # row : 0, row : 1, row : 2
+#         print(temp[row][col], " : ", end="")
+        
+#     print()
 
     
+#################################################################################################################
