@@ -1,17 +1,21 @@
-# 1. 문구 출력 : 입력 문자열의 줄(Line) 수를 입력하세요! 
-LineNumber = int(input("입력 문자열의 줄(Line) 수를 입력하세요! : "))
-# 영문의 문자열 키보드로 입력 받아 리스트에 저장
-Word = ""
-# 입력 받기  for 반복문 => 1의 수만큼 반복
-for Value in range (LineNumber) :
-    InputValue = input(str(Value+1) +" 번째 라인의 문자열을 입력하세요. : ")
-    Word += InputValue 
-#검색할 문자열 확인  (인덱스로 확인)
-Search = input("검색 할 문자열을 입력하세요. : ")
-print(Word)
+# 2차원 배열(리스트)
+
+temp = [ "hello", "king", "car" ]
+
+print(len(temp))      #=>  temp 의 총길이
+
+# 각 temp 요소의 길이
+print(len(temp[0]))    
+print(len(temp[1])) 
+print(len(temp[2])) 
+
+# temp 요소 안의 요소
+print(temp[1][3])
+
+for row in range(len(temp)): # row 0 -> 2         0  1  2
+    for col in range(len(temp[row])): # row : 0, row : 1, row : 2
+        print(temp[row][col], " : ", end="")   # [줄수] [가로의 칸수]
+        
+    print()
 
 
-for value in Word :
-    print(value)
-
-    
