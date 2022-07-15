@@ -22,40 +22,36 @@ WordList = ['hello world', 'hello worldddd hello', 'kkk']       # "리스트"로
 
 
 indexlist = ""   # 알파벳 담을 변수
-
-search_count = 0 # 검색횟수 변수
-
+linesu = ""      # 라인수 담을 변수
 # 4. for 반복문으로 WordList 요소 하나씩 꺼내기 
 for row in range (len(WordList)) :  # index = [0] [1] [2]
     for col in range (len(WordList[row])) :
         indexlist += WordList[row][col]  
 
+
+
 # 6. 검색된 횟수
 # WordList 리스트 각 요소안에 Search가 있으면
-        # 알파벳 담을 변수 / 한번 드가면 카운팅 
-        if Search in WordList or Search in indexlist :
-            search_count += 1
-
-print(search_count)
+        
 
 ########################################################################
 # 7. 총 단어 수
 # WordList 안에 " " 에 +1
 
-########################################################################
-#     # 5. 검색된 라인수
-#     # WordList 안에 Search 가 있으면 
-#         if " " in indexlist and Search in indexlist:
-#             if (row+1) not in linesu :
-#                 linesu += str(row+1)
-#             if Search  in WordList[(-row+1)] :
-#                 if "," not in linesu :
-#                     linesu += ","    
-#     # for 로 한 바퀴 돌면 해당 변수 리셋 시키기  
-#     indexlist = "" 
-# print(linesu)
+
+    # 5. 검색된 라인수
+    # WordList 안에 Search 가 있으면 
+        if " " in indexlist and Search in indexlist:
+            if (row+1) not in linesu :
+                linesu += str(row+1)
+            if Search  in WordList[(-row+1)] :
+                if "," not in linesu :
+                    linesu += ","    
+    # for 로 한 바퀴 돌면 해당 변수 리셋 시키기  
+    indexlist = "" 
+print(linesu)
        
- 
+######################################################################## 
 
 
 
