@@ -38,15 +38,18 @@ for inner_index in range (Line) : # 0 1 2
                 # Word 에 추가 
                 Word += Element
                 # 들어오는 요소가 마지막이면 마지막 Word 를 저장
-                if Element == Letter[len(Letter)-1] :
-                    Line_list[inner_index].append(Word)
+            if Element == Letter[len(Letter)-1] :
+                Line_list[inner_index].append(Word)
+
 
         # 2) 글자 있으면
-        else :                
-            if 
-            # 입력받은 알파벳들을 단어로 Word에 넣기
+        
+        elif Element == Blank :
+           Word = ""
+        # 입력받은 알파벳들을 단어로 Word에 넣기
+        else :
             Word += Element
-            # 만약에 마지막 글자라면 패스 
+        # 만약에 마지막 글자라면 패스 
             
                 
 print(Line_list)
