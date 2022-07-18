@@ -14,12 +14,13 @@ for index in range(num):
 # 검색어 입력
 findWord = input("검색 단어를 입력 하세요")
 
-for row in range(num):
-    stateIndex = 0
+for row in range(num):  # 0 1 2 
+    stateIndex = 0    # 맞는지 기준으로 잡는 Index
     previousChar = ""
     nextChar = ""
 
     for col in range(len(textList[row])):
+        # 다음 알파벳 설정
         nextChar = "" if col == (len(textList[row]) - 1) else textList[row][col+1]
        
         # 매칭 시작
@@ -37,5 +38,5 @@ for row in range(num):
         # 매칭 실패
         else:
              stateIndex = 0
-            
+        # 이전 알파벳 설정    
         previousChar = textList[row][col]
