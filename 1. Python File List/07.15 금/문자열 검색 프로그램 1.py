@@ -37,7 +37,7 @@ while not(searchCount):
         if searchValue in inputValueList[index]:                        # 검색 값이 있다면
             line.append(index + 1)                                      # 해당 인덱스+1 만큼 라인리스트에 넣기
 
-            for charIndex in range(len(inputValueList)):                # 단어들을 하나씩 찾는다.
+            for charIndex in range(len(inputValueList[index])):                # 단어들을 하나씩 찾는다.
                 if inputValueList[index][charIndex] == searchValue:     # 검색값과 같은 값이 있다면 
                     searchCount += 1                                    # 카운트
 
