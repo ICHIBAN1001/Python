@@ -61,6 +61,8 @@ switch = True
 
 # 찾고 싶은 글자 없으면 계속 반복하게 하기 
 while switch :
+
+
     # 1차원 리스트 
     for inner_list_index in range(len(Line_list)) :
         if Searching in Line_list[inner_list_index] :
@@ -76,20 +78,13 @@ while switch :
             else : 
                 line += str(inner_list_index+1)
 
-
         # 2차원 리스트
         for Letter_index in range (len(Line_list[inner_list_index])) :  
             # 찾는 글자 있는지
             if Line_list[inner_list_index][Letter_index] == Searching :
                 Same += 1  
  
-        #############################
-    if "" in line :
-        switch = True
-        Searching = input("찾을 수가 없습니다. 검색 할 문자 입력해라 : ")
-    else : 
-        switch = False
-        #############################
+    
         
 ################################################################################################
              
