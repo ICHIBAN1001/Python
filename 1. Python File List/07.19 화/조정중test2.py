@@ -45,7 +45,6 @@ while count < len(SortingList) :
     if len(row_List[sorting_count]) == 5 :
         sorting_count += 1
     count += 1
-print(row_List)
 ###################################
 
 
@@ -79,6 +78,11 @@ print("최소값", "\t\t","최대값", "\t","중간값")
 
 
 
+# for row in range (len(row_List)) :  # 0 ~ 4  ->  5개
+#     for col in range (len(row_List)) :
+#         if row == 0 or 
+#         print (row_List[row][col])  
+    
 # print("最小値 : ",SortingList[0])
 # print("中間値 : ",SortingList[12])
 # print("最大値 : ",SortingList[len(SortingList)-1])
