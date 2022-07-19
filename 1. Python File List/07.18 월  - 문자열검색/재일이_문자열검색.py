@@ -23,7 +23,7 @@ for inner_index in range (Line) : # 0 1 2
     # 문자열 입력 받기 
     Letter = input(str(inner_index+1)+"번째 라인의 문자열을 입력하세요. : ")
 
-    # <2차 리스트> -  ※2)內部 리스트 작성※
+    # 2. <2차 리스트> -  ※2)內部 리스트 작성※
     for Letter_index in range (len(Letter)) :
         # Letter 원소 알파벳 하나 씩 추출 
         Element = Letter[Letter_index]
@@ -54,8 +54,9 @@ Same = 0  # 찾는 글자 수
 
 Searching = input("찾고싶은 글자는？ : ")   # 찾으려는 글자 입력
 
-# 1차원 리스트 
+# 3. 1차원 리스트 
 for inner_list_index in range(len(Line_list)) :
+    # 라인안에 있는지 판별
     if Searching in Line_list[inner_list_index] :
         line.append(inner_list_index+1)
     # 2차원 리스트
