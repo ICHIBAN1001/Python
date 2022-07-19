@@ -59,13 +59,19 @@ Searching = input("찾고싶은 글자는？ : ")   # 찾으려는 글자 입력
 for inner_list_index in range(len(Line_list)) :
     if Searching in Line_list[inner_list_index] :
         # line.append(inner_list_index+1)
-        line += str(inner_list_index+1)
-        if Searching in Line_list[inner_list_index+1<3] :
-            line += ","
-        elif Searching in Line_list[inner_list_index+1==3] :
-            
+    #################################################### 
+        if Searching in Line_list[inner_list_index] and line:
+                line += ","
+
+        if not str(inner_list_index) in line :
             line += str(inner_list_index+1)
-            break
+        else : 
+            line += str(inner_list_index+1)
+            # 앞에 다른 숫자가 올 때 "," 입력하기 
+
+
+    #################################################### 
+
     # 2차원 리스트
     for Letter_index in range (len(Line_list[inner_list_index])) :  
         # 찾는 글자 있는지
@@ -75,8 +81,6 @@ for inner_list_index in range(len(Line_list)) :
 # 해당 라인 수
 # 
 #  
-
-
 
 ################################################################################################
              
