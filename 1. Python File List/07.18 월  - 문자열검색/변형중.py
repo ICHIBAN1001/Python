@@ -4,6 +4,7 @@
 
 
 # 문자열의 라인 수 입력 받기
+
 Line = int(input("입력 문자열의 줄(Line) 수를 입력하세요! : ")) 
 
 # 입력 받은 문자열을 담을  ※1)包括  리스트 작성※
@@ -55,33 +56,41 @@ Same = 0  # 찾는 글자 수
 
 Searching = input("찾고싶은 글자는？ : ")   # 찾으려는 글자 입력
 
-# 1차원 리스트 
-for inner_list_index in range(len(Line_list)) :
-    if Searching in Line_list[inner_list_index] :
-        # line.append(inner_list_index+1)
-    #################################################### 
-        if Searching in Line_list[inner_list_index] and line:
-                line += ","
+# while문 스위치
+switch = True
 
-        if not str(inner_list_index) in line :
-            line += str(inner_list_index+1)
-        else : 
-            line += str(inner_list_index+1)
+# 찾고 싶은 글자 없으면 계속 반복하게 하기 
+while switch :
+    # 1차원 리스트 
+    for inner_list_index in range(len(Line_list)) :
+        if Searching in Line_list[inner_list_index] :
+            # 스위치 계속 작동
+     
+            # 첫 인덱스 다음에 해당 인덱스 있으면 "," 추가 / 요소뒤 "," 사용하기 위해  Falsy 값 사용
+            if Searching in Line_list[inner_list_index] and line:
             # 앞에 다른 숫자가 올 때 "," 입력하기 
+                    line += ","
+
+            if not str(inner_list_index) in line :
+                line += str(inner_list_index+1)
+            else : 
+                line += str(inner_list_index+1)
 
 
-    #################################################### 
-
-    # 2차원 리스트
-    for Letter_index in range (len(Line_list[inner_list_index])) :  
-        # 찾는 글자 있는지
-        if Line_list[inner_list_index][Letter_index] == Searching :
-            Same += 1  
+        # 2차원 리스트
+        for Letter_index in range (len(Line_list[inner_list_index])) :  
+            # 찾는 글자 있는지
+            if Line_list[inner_list_index][Letter_index] == Searching :
+                Same += 1  
  
-# 해당 라인 수
-# 
-#  
-
+        #############################
+    if "" in line :
+        switch = True
+        Searching = input("찾을 수가 없습니다. 검색 할 문자 입력해라 : ")
+    else : 
+        switch = False
+        #############################
+        
 ################################################################################################
              
 print("검색된  라인 수 " ,line)
