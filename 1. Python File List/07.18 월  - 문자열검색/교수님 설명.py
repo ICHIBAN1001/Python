@@ -1,3 +1,5 @@
+# ★★★★★★stateIndex 사용하는 방법★★★★★★
+
 # 검색어 : hello
 # dhello dhellod hellod
 # hello
