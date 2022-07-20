@@ -1,8 +1,8 @@
-
 msg = "h   king  car a       ab  fmlkgj  "
 
 list = []
 word = ""
+
 
 count = 0
 for value in msg:
