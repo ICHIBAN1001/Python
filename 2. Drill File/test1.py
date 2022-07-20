@@ -21,9 +21,16 @@ for index in range (len(mylist)) :
 Dimensionlist = [[],[],[],[],[]] # 1 2 3 4 5
 
 count = 0
+Lcount = 0
 while count <len(mylist) :
-    
 
+    mylist.append(Dimensionlist[Lcount])
+
+    if len(Dimensionlist[Lcount]) == 5 :
+        Lcount += 1
+    count += 1
+    
+print(Dimensionlist)
 
 # 열
 
