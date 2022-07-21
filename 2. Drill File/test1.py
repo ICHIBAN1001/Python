@@ -1,43 +1,18 @@
-import random 
 
-mylist = []  # 25개 입력 받기 
+# 5번 회전시킬 상수
+COUNT = 5
 
-# 숫자 리스트에 정렬 
-while len(mylist) < 25 :
-    element = random.randint(1,50) 
-    if not element in mylist :
-        mylist.append(element)
-mylist.sort()
+# 합계 변수
+SUM = 0
 
-# 5 x 5 만들기
-for index in range (len(mylist)) : 
-    element = mylist[index] 
-    print(element,"\t", end="")
-    if (index+1) % 5 == 0 :
-        print()  
 
-# mylist = []
-# 2차원 리스트 만들기
-Dimensionlist = [[],[],[],[],[]] # 1 2 3 4 5
-
-count = 0
-Lcount = 0
-while count <len(mylist) :
-
-    mylist.append(Dimensionlist[Lcount])
-
-    if len(Dimensionlist[Lcount]) == 5 :
-        Lcount += 1
-    count += 1
+# 1.  for 반복문 -> 5번반복
+for value in range (COUNT) : # 0 1 2 3 4
+    # 2. 입력값 받기
+    Inputvalue = int(input(str(value+1)+"번째 값 입력 : "))
+    # 합계
+    SUM += Inputvalue
     
-print(Dimensionlist)
-
-# 열
-
-# 행
-
-# 전체
-print()
-print("最小値","\t",mylist[0])
-print("最大値""\t",mylist[12])
-print("中間値""\t",mylist[len(mylist)-1])
+# 출력부
+print("합계 :" , SUM)
+print("평균 :" , SUM/COUNT)
